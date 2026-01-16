@@ -1,0 +1,5 @@
+# MCP REPL Dependencies
+mcp>=1.0.0
+rich>=13.0.0
+prompt-toolkit>=3.0.0  # For autocompletion and history
+pyyaml>=6.0  # Optional: for YAML config support

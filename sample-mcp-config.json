@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.atlassian.com/v1/mcp"]
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "type": "http",
+      "headers": {
+        "Authorization": "Bearer YOUR_GITHUB_TOKEN"
+      }
+    },
+    "notion": {
+      "url": "https://mcp.notion.com/mcp",
+      "headers": {}
+    }
+  }
+}
