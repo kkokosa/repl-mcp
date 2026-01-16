@@ -55,7 +55,10 @@ pip install -e .
 ### Stdio Transport (command-based)
 
 ```bash
-# Remote MCP server via mcp-remote
+# Simple MCP server
+repl-mcp -c "npx -y @modelcontextprotocol/server-filesystem /tmp"
+
+# Remote MCP server via mcp-remote proxy (requires ngrok or similar for OAuth authorization!)
 repl-mcp -c "npx mcp-remote https://mcp.atlassian.com/v1/mcp"
 
 # Local Python MCP server
@@ -69,8 +72,9 @@ repl-mcp -c "uvx mcp-server-sqlite --db-path test.db"
 
 ```bash
 # GitHub Copilot MCP
-repl-mcp --url https://api.githubcopilot.com/mcp/ \
-         --header "Authorization: Bearer YOUR_GITHUB_TOKEN"
+repl-mcp -url https://api.githubcopilot.com/mcp/ \
+         -H "Authorization: Bearer YOUR_GITHUB_TOKEN" \
+         -t http
 
 # Notion MCP
 repl-mcp -u https://mcp.notion.com/mcp
