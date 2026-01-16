@@ -48,6 +48,10 @@ pip install -e .
 
 ## Usage
 
+> [!NOTE] `mcp-remote` sidenote
+> Some MCP servers (like Atlassian) use OAuth for authentication and don't support direct HTTP connections. The `mcp-remote` MCP bridges this gap by handling OAuth flows locally and/or converting HTTP-based MCP servers to stdio transport. Beware that for OAuth-based servers, `mcp-remote` needs to receive the OAuth callback. If you're running in an environment without a public URL (like WSL or a remote server), you'll need a tunneling tool like [ngrok](https://ngrok.com/) to expose the callback endpoint.
+
+
 ### Stdio Transport (command-based)
 
 ```bash
