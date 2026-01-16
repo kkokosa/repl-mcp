@@ -34,7 +34,7 @@ dependencies = [
 
 [project.optional-dependencies]
 yaml = ["pyyaml>=6.0"]
-dev = ["pytest", "ruff"]
+dev = ["pytest", "ruff", "tomli; python_version < '3.11'"]
 
 [project.scripts]
 repl-mcp = "repl_mcp:main_sync"

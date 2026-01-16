@@ -14,7 +14,10 @@ def test_version_in_toml_matches_code(monkeypatch):
     If we had a version in the code, we'd check it here.
     For now, just ensuring we can read pyproject.toml
     """
-    import tomllib
+    try:
+        import tomllib
+    except ModuleNotFoundError:
+        import tomli as tomllib  # Python 3.10 fallback
 
     with open("pyproject.toml", "rb") as f:
         data = tomllib.load(f)
