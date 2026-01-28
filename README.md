@@ -8,6 +8,8 @@ Interactive REPL for testing Model Context Protocol (MCP) servers.
 
 ![Demo of repl-mcp](repl-mcp-demo.gif)
 
+Replated blog post: [https://kokosa.dev/blog/2026/repl-mcp/](https://kokosa.dev/blog/2026/repl-mcp/).
+
 ## Features
 
 - List and inspect tools, prompts, and resources
